@@ -8,17 +8,17 @@
 ## 启动命令
 在该`project`目录下运行：</br>
 `for Windows:`
-CMD ->>: python server.py
+CMD ->>: python server.py</br>
 将会打印该server监听的端口号，访问入口：`localhost:10000`，然后被重定向到登陆页面，然后自己玩耍去吧！
 </br>
 </br>
 # 开发环境
-Python version: CPython 3.6.5
-Tornado version: 5.1
-MySQL Server version：8.0.11
-#TODOS
+Python version: CPython 3.6.5</br>
+Tornado version: 5.1</br>
+MySQL Server version：8.0.11</br>
+# TODOS
 把该应用打包到`ubuntu`镜像，从容器中运行。</br>
 容器联网还有点问题</br>
 
 # License
-GPL V2.0
+GPL V2.0</br>
