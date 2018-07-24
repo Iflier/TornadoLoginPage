@@ -7,7 +7,7 @@
 2.新的用户，可以在登陆页面找到`注册`按钮，进行手动注册，成功后跳转到`welcome`页面。注意：会检查新的注册用户名是否存在</br>
 ## 启动命令
 在该`project`目录下运行：</br>
-`for Windows:`
+`for Windows:`</br>
 CMD ->>: python server.py</br>
 将会打印该server监听的端口号，访问入口：`localhost:10000`，然后被重定向到登陆页面，然后自己玩耍去吧！
 </br>
