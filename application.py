@@ -53,6 +53,7 @@ class BaseHandler(tornado.web.RequestHandler):
             self.write("Error: {0}".format(status_code))
     
     def get_current_user(self):
+        # 返回类型str 或者NoneType
         userName = self.get_secure_cookie('userName')
         if isinstance(userName, bytes):
             return userName.decode(encoding='utf-8')
@@ -82,7 +83,7 @@ class RegisterHandler(BaseHandler):
         print(userName, passWord)
         if all((userName, passWord)):
             sql = "SELECT username FROM login WHERE username=%s"
-            beforeRegQueryResult = self.cursor.execute(sql, (userName,))
+            beforeRegQueryResult = self.cursor.execute(sql, (userName,))  # 返回int类型
             if beforeRegQueryResult:
                 kwargs = dict()
                 kwargs["userName"] = userName
@@ -93,7 +94,7 @@ class RegisterHandler(BaseHandler):
                     insertResult = self.cursor.execute(sql, (userName, passWord))
                     if insertResult:
                         self.set_secure_cookie("userName", userName,
-                                            expires=time.time() + 6 * 60 * 60)
+                                               expires=time.time() + 6 * 60 * 60)
                         self.redirect("/welcome")
                 except Exception:
                     self.redirect("/wrong")
