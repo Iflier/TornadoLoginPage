@@ -10,6 +10,8 @@
 `for Windows:`</br>
 CMD ->>: python server.py</br>
 将会打印该server监听的端口号，访问入口：`localhost:10000`，然后被重定向到登陆页面，然后自己玩耍去吧！
+## NOTES
+**好消息！** 如果安装`MySQL Server`有困难，可以参考使用 `Python`标准库自带的`Sqlite3`的这个[**project**](https://github.com/Iflier/TornadoLoginPageWithSqlite)。
 </br>
 </br>
 # 开发环境
